@@ -15,8 +15,7 @@ h1{font-size:24px;font-weight:900;line-height:1.1;letter-spacing:-0.4px;margin:2
 .sub-w{font-size:14px;font-weight:500;color:#D4D4D8;line-height:1.5;margin-bottom:26px;max-width:320px}
 .video{width:100%;aspect-ratio:16/9;background:#000;border-radius:18px;margin-bottom:36px;overflow:hidden;border:0.5px solid rgba(255,255,255,0.08)}
 .rec{font-size:18px;font-weight:900;color:#fff;letter-spacing:-0.3px;margin-bottom:10px;text-transform:uppercase}
-.btn{display:inline-flex;align-items:center;justify-content:center;width:fit-content;max-width:92%;background:#22C55E;color:#000;border:none;border-radius:999px;padding:14px 26px;font-weight:900;font-size:14px;letter-spacing:0.3px;margin:24px auto 12px auto;box-shadow:0 8px 24px rgba(34,197,94,0.35);text-decoration:none;text-transform:uppercase;white-space:nowrap;line-height:1;cursor:pointer;transition:all 0.25s ease}
-.btn:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(34,197,94,0.45)}
+.btn{display:inline-flex;align-items:center;justify-content:center;width:fit-content;max-width:92%;background:#22C55E;color:#000;border:none;border-radius:999px;padding:14px 26px;font-weight:900;font-size:14px;letter-spacing:0.3px;margin:24px auto 12px auto;box-shadow:0 8px 24px rgba(34,197,94,0.35);text-decoration:none;text-transform:uppercase;white-space:nowrap;line-height:1;cursor:pointer}
 .btn:active{transform:scale(0.97)}
 .urgency{font-size:12px;color:#E2E2E6;font-style:italic;font-weight:500;margin-bottom:6px;line-height:1.4;max-width:320px}
 .under{font-size:11px;color:#A1A1A6;margin-bottom:22px}
@@ -25,10 +24,8 @@ h1{font-size:24px;font-weight:900;line-height:1.1;letter-spacing:-0.4px;margin:2
 .dev{font-size:13.5px;color:#C7C7CC;font-weight:500;line-height:1.5;margin-bottom:30px}
 .dev span{color:#22C55E;font-weight:700}
 .div{height:1px;width:85%;margin:36px auto 28px;background:linear-gradient(90deg, rgba(34,197,94,0) 0%, rgba(34,197,94,0.9) 50%, rgba(34,197,94,0) 100%);box-shadow:0 0 10px rgba(34,197,94,0.6)}
-.foot{line-height:1.6;padding-top:8px}
-.foot-title{font-size:11px;font-weight:700;color:#8E8E93;letter-spacing:2.5px;margin-bottom:10px;text-transform:uppercase}
-.foot-links{font-size:11px;color:#8E8E93}
-.foot-links a{color:#8E8E93;text-decoration:none}
+.foot{line-height:1.6;padding-top:8px;text-align:center}
+.foot-simple{font-size:11px;font-weight:500;color:#8E8E93;letter-spacing:0.3px}
 </style>
 </head>
 <body>
@@ -46,18 +43,8 @@ h1{font-size:24px;font-weight:900;line-height:1.1;letter-spacing:-0.4px;margin:2
     <div class="garant">Garantia incondicional de <span>7 dias.</span></div>
     <div class="dev">Se não evitar 1 vencimento no seu mês,<br>devolvemos <span>100%</span> do seu investimento.</div>
     <div class="div"></div>
-    <div class="foot">
-      <div class="foot-title">CONTRATO • GUARDIÃO © 2027</div>
-      <div class="foot-links"><a href="#">Termos</a> • <a href="#">Privacidade</a> • <a href="#">Suporte</a></div>
-    </div>
+    <div class="foot"><div class="foot-simple">2027 © Contrato Guardião. Todos os direitos autorais reservados.</div></div>
   </div>
 </div>
-<script>
-document.getElementById('btn-checkout').addEventListener('click', function(e){
-  e.preventDefault(); const btn=this; const link=btn.getAttribute('href');
-  btn.textContent='Guardando...'; btn.disabled=true;
-  setTimeout(function(){ window.location.href=link; }, 1200);
-});
-</script>
 </body>
 </html>
