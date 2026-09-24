@@ -12,14 +12,40 @@ body{background:#050505;font-family:'Inter',sans-serif;display:flex;justify-cont
 .top-bar{background:#0A0A0A;border:1px solid #22C55E;color:#fff;text-align:center;padding:8px 18px;font-weight:700;font-size:11px;width:fit-content;max-width:90%;line-height:1.3;letter-spacing:0.6px;text-transform:uppercase;border-radius:999px;margin:18px auto 0}
 .content{padding:28px 16px 40px;text-align:center;width:100%;display:flex;flex-direction:column;align-items:center}
 .logo{font-size:12px;letter-spacing:4px;color:#D1D1D6;font-weight:600;margin-top:28px;margin-bottom:22px}
-h1{font-size:24px;font-weight:900;line-height:1.1;letter-spacing:-0.4px;margin-bottom:20px;text-transform:uppercase;text-align:center}
-.sub-w{font-size:14px;font-weight:600;color:#D4D4D8;line-height:1.5;margin-bottom:12px;max-width:320px}
-.sub-g{font-size:13px;color:#E2E2E6;line-height:1.5;margin-bottom:28px;font-weight:400;max-width:310px;opacity:0.9}
+h1{font-size:24px;font-weight:900;line-height:1.1;letter-spacing:-0.4px;margin-bottom:16px;text-transform:uppercase;text-align:center}
+.sub-w{font-size:14px;font-weight:500;color:#D4D4D8;line-height:1.5;margin-bottom:26px;max-width:320px}
 .video{width:100%;aspect-ratio:16/9;background:#000;border-radius:18px;margin-bottom:36px;overflow:hidden;border:0.5px solid rgba(255,255,255,0.08)}
 .rec{font-size:18px;font-weight:900;color:#fff;letter-spacing:-0.3px;margin-bottom:10px;text-transform:uppercase}
 .mini-light{font-size:10px;letter-spacing:3px;color:#B4B4BB;font-weight:600;text-transform:uppercase;margin-bottom:18px}
-.btn{display:inline-flex;align-items:center;justify-content:center;width:auto;padding:0 32px;height:50px;background:#22C55E;color:#000;border-radius:999px;font-weight:900;font-size:14px;text-decoration:none;letter-spacing:0.3px;margin:24px auto 12px auto;box-shadow:0 8px 20px rgba(34,197,94,0.35);border:none;cursor:pointer;text-transform:uppercase;white-space:nowrap}
+
+/* BOTÃO PÍLULA OTIMIZADO */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:fit-content;
+  max-width:92%;
+  background:#22C55E;
+  color:#000;
+  border:none;
+  border-radius:999px;
+  padding:14px 26px;
+  font-weight:900;
+  font-size:14px;
+  letter-spacing:0.3px;
+  margin:24px auto 12px auto;
+  box-shadow:0 8px 24px rgba(34,197,94,0.35);
+  text-decoration:none;
+  text-transform:uppercase;
+  white-space:nowrap;
+  line-height:1;
+  cursor:pointer;
+  transition:all 0.25s ease;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(34,197,94,0.45)}
 .btn:active{transform:scale(0.97)}
+.btn:disabled{opacity:0.85;pointer-events:none}
+
 .urgency{font-size:12px;color:#E2E2E6;font-style:italic;font-weight:500;margin-bottom:6px;line-height:1.4;max-width:320px}
 .under{font-size:11px;color:#A1A1A6;margin-bottom:22px}
 .garant{font-size:14px;font-weight:700;color:#fff;margin-bottom:10px}
@@ -44,7 +70,6 @@ h1{font-size:24px;font-weight:900;line-height:1.1;letter-spacing:-0.4px;margin-b
       <span style="color:#FFFFFF;">VAI TE CUSTAR MILHARES?</span>
     </h1>
     <div class="sub-w">O fornecedor já sabe onde seu contrato venceu. Você não.</div>
-    <div class="sub-g">Em 27 segundos, veja o contrato que vai te multar na renovação automática.</div>
     <div class="video"></div>
     <div class="rec">O QUE O GUARDIÃO FAZ?</div>
     <div class="mini-light">CONTRATO • VENCIMENTO • RENOVAÇÃO</div>
@@ -67,9 +92,9 @@ h1{font-size:24px;font-weight:900;line-height:1.1;letter-spacing:-0.4px;margin-b
 <script>
 document.getElementById('btn-checkout').addEventListener('click', function(e){
   e.preventDefault(); const btn=this; const link=btn.getAttribute('href');
-  btn.textContent='Guardando...'; btn.style.opacity='0.8'; btn.style.pointerEvents='none';
-  setTimeout(function(){ window.location.href=link; }, 1500);
+  btn.textContent='Guardando...'; btn.disabled=true;
+  setTimeout(function(){ window.location.href=link; }, 1200);
 });
 </script>
 </body>
-                                            </html>
+</html>
